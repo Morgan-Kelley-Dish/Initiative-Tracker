@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Strategic Initiative Tracking</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./stylesheet.css" />
+</head>
+<body>
+  <div ng-app="" ng-controller="myCtrl">
+    <div id="jumbotron jumbotron-fluid" class="app-title">
+      <h2 class="display-4 text-left">Initiative Tracker</h2>
+    </div>
+    <div class="article">
+      <h3>Call Lists</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Account Number</th>
+            <th scope="col">Call Type</th>
+            <th scope="col">Rec Tool Usage</th>
+            <th scope="col">R&R</th>
+            <th scope="col">Flow Used</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="call in callList">
+            <td>{{call.accountNumber}}</td>
+            <td>{{call.callType}}</td>
+            <td>{{call.recTool}}</td>
+            <td>{{call.rAndR}}</td>
+            <td>{{call.flow}}</td>
+          </tr>
+          <tr>
+            <td><input type="number" ng-model="accountNumber" placeholder="Account Number"></td>
+            <td><input type="text" ng-model="callType" placeholder="Call Type"></td>
+            <td class="text-justify">
+              <table class="table inner-table">
+                <tr class="inner-table"><td class="inner-table">Available:</td><td class="inner-table">1. <input type="checkbox" ng-model="rec-1">2. <input type="checkbox" ng-model="rec-2">3. <input type="checkbox" ng-model="rec-3"></td></tr>
+                <tr class="inner-table"><td class="inner-table">Used:</td><td class="inner-table">1. <input type="checkbox" ng-model="rec-1">2. <input type="checkbox" ng-model="rec-2">3. <input type="checkbox" ng-model="rec-3"></td></tr>
+              </table>
+            </td>
+            <td><input type="text" ng-model="rAndR" placeholder="R&R"></td>
+            <td><input type="text" ng-model="flow" placeholder="Flow"></td>
+          </tr>
+          <tr>
+            <td><button class="btn-submit" ng-click="addCall()">Submit</button>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<p ng-bind="output"></p>
+
+<script>10:49 AM 3/12/2020
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+  addCall = function() {
+    $scope.output = "button works!";
+  }
+});
+</script>
+</body>
+</html
