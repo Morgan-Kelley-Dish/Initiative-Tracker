@@ -41,8 +41,8 @@
             <td><input type="text" ng-model="callType" placeholder="Call Type"></td>
             <td class="text-justify">
               <table class="table inner-table">
-                <tr class="inner-table"><td class="inner-table">Available:</td><td class="inner-table">1. <input type="checkbox" ng-model="rec-1">2. <input type="checkbox" ng-model="rec-2">3. <input type="checkbox" ng-model="rec-3"></td></tr>
-                <tr class="inner-table"><td class="inner-table">Used:</td><td class="inner-table">1. <input type="checkbox" ng-model="rec-1">2. <input type="checkbox" ng-model="rec-2">3. <input type="checkbox" ng-model="rec-3"></td></tr>
+                <tr class="inner-table-row"><td>Available:</td><td class="inner-table">1. <input type="checkbox" ng-model="rec-1">2. <input type="checkbox" ng-model="rec-2">3. <input type="checkbox" ng-model="rec-3"></td></tr>
+                <tr class="inner-table-row"><td>Used:</td><td class="inner-table">1. <input type="checkbox" ng-model="rec-1">2. <input type="checkbox" ng-model="rec-2">3. <input type="checkbox" ng-model="rec-3"></td></tr>
               </table>
             </td>
             <td><input type="text" ng-model="rAndR" placeholder="R&R"></td>
@@ -57,13 +57,7 @@
   </div>
 <p ng-bind="output"></p>
 
-<script>10:49 AM 3/12/2020
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-  addCall = function() {
-    $scope.output = "button works!";
-  }
-});
+<script type="text/javascript" src="./angularcore.txt">
 </script>
 </body>
 </html
