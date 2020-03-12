@@ -1,7 +1,8 @@
 # Initiative-Tracker
 Custom web app to track calls and initiatives
 
-NOT YET OPERATIONAL.
+NOT YET OPERATIONAL
+
 Primary features
  - Add variables and functions for call data
  - Add filters for call types
